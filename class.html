@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div {
+            width: 500px;
+            height: 200px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+
+    <div></div>
+
+    <script>
+        let el = document.querySelector('div');
+        console.log(getComputedStyle(el).width); // размер элемента по width(если не.width то выведет все что есть у элемента)
+         
+        console.log('ширина эл.: ' + el.offsetWidth);
+        console.log('высота эл.: ' + el.offsetHeight);
+
+        console.log('ширина эл. без рамки: ' + el.clientWidth);
+        console.log('высота эл. без рамки: ' + el.clientHeight);
+
+        console.log('ширина левой рамки эл. : ' + el.clientLeft);
+        console.log('ширина верхней рамки эл. : ' + el.clientTop);
+
+        console.log(document.body.scrollHeight);// высота страницы
+        console.log(document.body.scrollWidth);// ширина страницы
+
+        console.log(el.getBoundingClientRect().x + ' x');//координаты
+
+        console.log(el.getBoundingClientRect().y + ' y');//координаты
+        
+    </script>
+</body>
+</html>
